@@ -35,7 +35,7 @@ router.get('/mens/:id', async (req, res) => {
 
 router.patch('/mens/:id', async (req, res) => {
     try {
-        const id = req.params.id
+        const id = req.params.id;
         const updateMen = await MensRanking.findByIdAndUpdate({_id: id}, req.body, {new: true})
         res.send(updateMen);
     } catch (e) {

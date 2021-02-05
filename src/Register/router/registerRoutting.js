@@ -55,10 +55,11 @@ router.patch('/register/:id', async (req, res) => {
 // Delete student by id
 router.delete('/register/:id', async (req, res) => {
     try {
-        const deleteStudent = await Register.findByIdAndDelete(req.params.id)
-        if (!req.params.id) {
-            res.status(404).send()
-        }
+        const _id = req.params.id
+        const deleteStudent = await Register.findByIdAndDelete({_id})
+        // if (!req.params.id) {
+        //     res.status(404).send()
+        // }
         res.send(deleteStudent);
     } catch (e) {
         res.send(e)

@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/Athletics-api/app.js",
-    "dev": "nodemon src/Athletics-api/app.js "
+    "start": "node src/registrationForm/app.js",
+    "dev": "nodemon src/registrationForm/app.js "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "hbs": "^4.1.1",
     "mongoose": "^5.11.14",
     "validator": "^13.5.2"
   }
