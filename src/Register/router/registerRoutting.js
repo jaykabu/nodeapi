@@ -57,7 +57,7 @@ router.delete('/register/:id', async (req, res) => {
     try {
         const _id = req.params.id
         const deleteStudent = await Register.findByIdAndDelete({_id})
-        // if (!req.params.id) {
+        // if (!deleteStudent) {
         //     res.status(404).send()
         // }
         res.send(deleteStudent);
